@@ -1,0 +1,99 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Typography */
+ 
+@font-face {    
+  font-family: 'MyWebFont';
+  src: url('../students/coco.ttf')
+}
+ 
+body {
+  font-family: 'MyWebFont', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto';
+}
+/* 
+
+#site-main {
+ /* overflow: hidden; */ /*
+    
+}
+section .students {                Cuando hay espacio 
+  float: left;
+  width:
+}
+section.resources {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+
+
+*/
+
+/* Layout */
+
+.container {
+  margin: 0 20px;
+}
+
+ /* Mobile CSS */
+
+@media (min-width : 300px) {
+
+    body {
+      margin: 0 20px;
+      padding-top: 20px;
+      margin-bottom: 50px;
+    }
+
+}
+
+/* Desktop CSS */
+
+@media (min-width : 768px) {
+
+    #site-main section.section {
+      float: left;
+    }
+
+    .experiments {
+      float: right;
+      padding-right: 50px;
+    }
+
+    .container {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    #site-main .section {
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+}
+
+/* Prueba ocultaciones */
+.hidden-button-1 {
+  display: none;
+}
+
