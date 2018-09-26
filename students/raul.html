@@ -10,54 +10,71 @@
 </head>
 
 <body>
-  <header class="container">
-    <a class="link" href="../index.html">Página Principal</a>
-    <h1>Cohort 09 2018</h1>
+  <header class="background nav-bar">
+    <div class="flex">
+        <a class="link" href="../index.html">Página Principal</a>
+        <h1>Raúl Cote Utor</h1>
+    </div>
   </header>
 
+
+
   <main id="site-main">
-   
+
     <section class="section">
-      <h2>Raúl Cote</h2>
-      <img class="image" src="../students/raul.png" alt="random image">
-      <p class = "paragraph">Esta página es mi perfil personal para IronHack</p>
-      <em>¡¡MI PERFIL!!</em>
+      <h2>Cohort 09 2018</h2>
+      <div class="image-background">
+        <img class="image" src="../students/images/raul fotos/code-icon.png" alt="random image">
+      </div>
+      <div class = "paragraph container">
+        <p>Esta página es mi perfil personal para IronHack. En ella pongo en práctica algunos conocimientos aprendidos al comienzo del curso.</p>
+      </div>
 
       <button class="button intereses-button">Intereses</button>
-      <div class="intereses">
+      <div class="intereses hidden-button-1">
         <h3>Mis intereses</h3>
         <ul class="interests">
-          <li>Aprender JavaScript</li>s
+          <li>Aprender JavaScript</li>
           <li>Aprender CSS</li>
           <li>Aprender HTML</li>
-          <li>Tocar música</li>
         </ul>
       </div>
     </section>
-    <div></div>
+
     <button class="button experiments-button">Experimentos</button>
-    <section class="experiments">        <!--   emmet abreviation: article.card.experiment>header.card-header>h3.title{My first experiment}   --> 
+    <section class="experiments hidden-button-1">   
       <h2>Experimentos</h2>
       <article class="card experiment">
         <header class="card-header">
           <h3 class="title">My first experiment</h3>
         </header>
-      
-
-        <div class="card-body">          <!--   div.card-body>p>em{WIP}^{JS Basic}+p>a.external{Míralo en Github}   --> 
+        <div class="card-body">    
+          <p>Timer</p>
+            <button class="button time-out">Timer</button>
+            <div class="timer"></div>
+            <button class="button stop-time">Stop</button>
           <p><em>WIP</em></p>
           <p>JS Basic</p>
           <p><a href="" class="external">Míralo en Github</a></p>
         </div>
-
-        <footer>                           <!--   footer>p{Created in xx/xx/xxxx}   --> 
-          <p>Created in xx/xx/xxxx</p>
-        </footer>
       </article>
     </section>
-
-
   </main>
+
+
+  <footer class = "color flex"> 
+      <!-- SEARCH  -->
+    <div class="search">
+        <label for="">Students</label>
+          <div class="input-students">
+            <input type="text">
+            <div class="search-results">
+            </div>
+          </div>
+      </div>                          <!--   footer>p{Created in xx/xx/xxxx}   --> 
+    <p>Creado en Septiembre 2018</p>
+  </footer>
+  <script src="../students.js"></script>
   <script type="text/javascript" src="raul.js"></script>
 </body>
 </html>

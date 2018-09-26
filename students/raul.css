@@ -11,90 +11,62 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #f6f9fa;
+  color: #0d1214;
 }
 
 
 /* Typography */
  
-@font-face {    
-  font-family: 'MyWebFont';
-  src: url('../students/coco.ttf')
-}
- 
 body {
-  font-family: 'MyWebFont', sans-serif;
-}
-
-h1 {
-  font-family: 'Roboto';
-}
-/* 
-
-#site-main {
- /* overflow: hidden; */ /*
-    
-}
-section .students {                Cuando hay espacio 
-  float: left;
-  width:
-}
-section.resources {
-  float: right;
-}
-
-.clear {
-  clear: both;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 
-
-*/
-
-/* Components */
+/* Components ::: General Buttons & Links */
 
 .button {
   width: 200px;
   height: 60px;
-  background-color: white;
-  color: black;
+  background-color: #0d1214;
+  color: #f6f9fa;
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px solid black;
+  border: 2px solid #0d1214;
   border-radius: 2px;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
   box-shadow: 1px rgb(182, 177, 177);
-  /*margin: 20px 0;*/
 }
 
 .button:hover {
-  background-color: black;
-  color: white;
+  background-color: #f6f9fa;
+  color: #0d1214;
 }
 .button:active {
-  background-color: black;
+  background-color: #0d1214;
   color: #00ccff;
   border: 1px solid #00ccff;
 }
 
-header a.link {
+a {
   text-decoration: none;
   text-decoration-line: underline;
-  color: black;
+  color: #0d1214;
 }
 
-header a.link:visited {
+a:visited {
   text-decoration: none;
   text-decoration-line: underline;
-  color: black;
+  color: #0d1214;
 }
 
-header a.link:hover {
+a:hover {
   text-decoration: none;
   text-decoration: blink;
 }
 
-header a.link:active {
+a:active {
   text-decoration: none;
   text-decoration: blink;
   color: rgb(0, 204, 255)
@@ -102,28 +74,64 @@ header a.link:active {
 
 /* Layout */
 
+header.nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  background-color: white;  /* Este es el único blanco puro */
+  border-bottom: 1px transparent #00ccff;
+  box-shadow: 0 3px 3px rgba(4, 100, 100, 0.15);
+}
+
+div.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  height: 100%;
+}
+
+div.flex h1 {
+  order: 1;
+  font-size: 1.3em;
+}
+
+div.flex a.link {
+  order: 2;
+}
 .container {
   margin: 0 20px;
 }
 
+ul.interests {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+/* Section ::: Perfil ::: Text, buttons */
+
+
+section.section div.paragragh {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
  /* Mobile CSS */
 
-@media (min-width : 300px) {
+/* @media (min-width : 300px) { */
 
-    body {
-      margin: 0 20px;
-      padding-top: 20px;
+    #site-main {
+      padding-top: 80px;
       margin-bottom: 50px;
     }
 
-    header h1 {
+    /* .container {
       text-align: center;
-    }
+    } */
 
-
-
-    .container {
+    section.section {
       text-align: center;
+      padding-bottom: 20px;
     }
 
     .button {
@@ -131,36 +139,32 @@ header a.link:active {
       margin: 0 auto;
     }
 
-    .image {
-      display: block;
-      margin: 0 auto;
-    }
 
-}
+/* } */
 
 /* Desktop CSS */
 
-@media (min-width : 768px) {
+/* @media (min-width : 768px) { */
 
-    #site-main section.section {
+    /* #site-main section.section {
       float: left;
-    }
+    } */
 
-    .experiments {
+    /* .experiments {
       float: right;
       padding-right: 50px;
-    }
+    } */
 
-    .container {
+    /* .container {
       text-align: center;
       padding-top: 50px;
-    }
+    } */
 
-    #site-main .section {
+    /* #site-main .section {
       margin-left: 50px;
       margin-bottom: 50px;
     }
-}
+} */
 
 /* Prueba ocultaciones */
 
@@ -168,8 +172,97 @@ header a.link:active {
   display: none;
 }
 
-.image {
-  border: 5px solid black;
+/* section. div img.image {
+  border: 5px solid #0d1214;
+  display: block;
+  margin: 0 auto;
+} */
+
+section.section div.image-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1214;
+  width: 100%;
+  height: 300px;
 }
 
+.image {
+  width: 150px;
+}
+
+
+/* Experiment 1 ::: Timer */
+.time-out {
+  margin-bottom: 10px;
+}
+
+
+
+/* Footer ::: Background, Search Bar & Footer text */
+
+footer.flex {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  padding: 10px;
+  flex-direction: column;
+}
+
+footer.color {
+  background-color: #0d1214;
+  color: #f6f9fa;
+  height: 350px;
+}
+
+
+footer div.search {
+  order: 1;
+}
+
+footer p {
+  order: 2;
+}
+/* Search Components (Footer)  */
+
+.input-students {
+  position: relative;
+  display: inline-block;
+
+}
+
+.input-students input {
+  width: 150px;
+}
+
+.input-students .search-results {
+  position: absolute;
+  background-color: #f6f9fa;
+  width: 150px;
+  text-align: left;
+  border-color: 1px solid #00ccff;
+}
+
+.input-students .search-results a {
+  text-align: left;
+
+}
+
+footer p {
+  position: relative;
+}
+
+.search-results ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.search-results ul li {
+  text-align: left;
+}
 
